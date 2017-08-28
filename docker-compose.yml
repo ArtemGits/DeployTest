@@ -1,0 +1,17 @@
+version: '2'
+services:
+  postgres:
+    env_file: .env
+    image: postgres
+  web:
+    env_file: .env
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./sandbox:/code
+    ports:
+      - "8000:8000"
+    depends_on:
+      - postgres
+volumes:
+  pgdata:

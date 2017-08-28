@@ -1,0 +1,39 @@
+{% extends "base2.html" %}
+{% load cms_tags menu_tags sekizai_tags staticfiles %}
+
+{% block title %}{% page_attribute "page_title" %}{% endblock title %}
+
+{% block content %}
+
+<section id="hero">
+    <div class="hero-container">
+      <div class="wow fadeIn">
+        <div class="hero-logo">
+          <img class="" src="/static/img/logo.png" alt="Imperial">
+        </div>
+        
+                    <form method="POST">
+                        {% csrf_token %}
+                        <p>
+                            <label>Username</label>
+                            <input type="text" name="username">
+                        </p>
+                        <p>
+                            <label>Password</label>
+                            <input type="password" name="password">
+                        </p>
+                        <button type="submit">Login</button>
+                    </form>
+      </div>
+    </div>
+</section>
+
+   
+    
+       
+    
+
+{% endblock content %}
+
+
+

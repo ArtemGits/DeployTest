@@ -1,0 +1,193 @@
+{% load cms_tags menu_tags sekizai_tags staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{% page_attribute 'page_title' %}Imperial Boootstrap Template</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+    
+  <!-- Facebook Opengraph integration: https://developers.facebook.com/docs/sharing/opengraph -->
+  <meta property="og:title" content="">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:description" content="">
+  
+  <!-- Twitter Cards integration: https://dev.twitter.com/cards/  -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="">
+  <meta name="twitter:title" content="">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image" content="">
+  
+  <!-- Place your favicon.ico and apple-touch-icon.png in the template root directory -->
+  <link href="favicon.ico" rel="shortcut icon">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet"> 
+  <!-- Custom Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+
+  
+  <!-- Bootstrap CSS File -->
+  <link href="{% static 'css/css/new-age.min.css ' %}" rel="stylesheet">
+  <link href="{% static 'lib/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  
+  <!-- Libraries CSS Files -->
+  <link href="{% static 'lib/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+  <link href="{% static 'lib/animate-css/animate.min.css' %}" rel="stylesheet">
+  
+  <!-- Main Stylesheet File -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
+  <link href="{% static 'css/footer.css' %}" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="{% static 'lib/lib/font-awesome/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'lib/lib/simple-line-icons/css/simple-line-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'lib/lib/device-mockups/device-mockups.min.css' %}">
+
+    <!-- Theme CSS -->
+  
+
+
+
+    <!-- {% block additional_css %}
+    {% endblock additional_css %} -->
+    {% render_block "css" %}
+
+</head>
+
+<body>
+
+  <div id="preloader"></div>
+  {% cms_toolbar %}
+<!--==========================
+  Hero Section
+============================-->
+
+{% block content %}
+
+       
+
+  
+<section id="hero">
+
+    {% placeholder head or %}
+    {% endplaceholder %}
+
+</section>
+  
+<!--==========================
+  Header Section
+============================-->
+  <header id="header">
+    <div class="container">
+    
+      <div id="logo" class="pull-left">
+        <!-- <a href="#hero"><img src="{% static 'img/logo.png' %}" alt="" title="" /></img></a> -->
+        <!-- Uncomment below if you prefer to use a text image -->
+        <h1><a href="#hero">FlexyDrive</a></h1>
+      </div>
+        
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+        {% show_menu 0 100 100 100 %}
+         
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
+ 
+
+<!--==========================
+  About Section
+============================-->
+  <section id="about">
+    {% placeholder one or %}
+    {% endplaceholder %}
+  </section>
+  
+<!--==========================
+  Services Section
+============================-->
+  <section id="services">
+    {% placeholder two or %}
+    {% endplaceholder %}  
+  </section>
+  
+<!--==========================
+  Subscrbe Section
+============================-->  
+  <section id="subscribe">
+   {% placeholder three or %}
+   {% endplaceholder %}
+  </section>
+    
+<!--==========================
+  Porfolio Section
+============================-->
+  <section id="portfolio">
+    {% placeholder four or %}
+    {% endplaceholder %}
+    
+  </section>
+    
+<!--==========================
+  Testimonials Section
+============================--> 
+  <section id="testimonials">
+  {% placeholder five or %}
+  {% endplaceholder %}
+  </section>
+
+<!--==========================
+  Team Section
+============================-->    
+  <section id="team">
+    {% placeholder six or %}
+    {% endplaceholder %}
+   
+  </section>
+     
+
+
+    
+
+<!--==========================
+  Footer
+============================--> 
+<link href="https://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css" rel="stylesheet">
+<!--footer start from here-->
+<footer>
+
+{% static_placeholder "Footer" %}
+  
+</footer>
+<!--footer start from here-->
+
+
+    
+ {% endblock content %}
+
+    
+  <!-- Required JavaScript Libraries -->
+  <script src="{% static 'lib/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'lib/bootstrap/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'lib/superfish/hoverIntent.js' %}"></script>
+  <script src="{% static 'lib/superfish/superfish.min.js' %}"></script>
+  <script src="{% static 'lib/morphext/morphext.min.js' %}"></script>
+  <script src="{% static 'lib/wow/wow.min.js' %}"></script>
+  <script src="{% static 'lib/stickyjs/sticky.js' %}"></script>
+  <script src="{% static 'lib/easing/easing.js' %}"></script>
+  
+  <!-- Template Specisifc Custom Javascript File -->
+  <script src="{% static 'js/custom.js' %}"></script>
+  
+  <!--<script src="{% static 'contactform/contactform.js' %}"></script> -->
+  
+  {% render_block "js" %}  
+</body>
+</html>
